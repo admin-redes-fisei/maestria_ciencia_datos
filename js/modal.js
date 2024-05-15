@@ -109,3 +109,18 @@ window.addEventListener("click", function(event) {
     modal_cup.style.display = "none";
   }
 });
+
+document.getElementById("btn-malla").addEventListener("click", function() {
+ 
+  var pdfUrl = "files/mallacurricular.pdf";
+  
+  // Crea un enlace temporal para la descarga
+  var link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "malla_curricular.pdf"; // Nombre de descarga del PDF
+  
+  // Agrega el enlace al documento y simula el clic para iniciar la descarga
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link); // Limpia el enlace del documento después de la descarga
+});
