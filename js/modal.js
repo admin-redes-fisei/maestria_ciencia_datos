@@ -135,3 +135,17 @@ document.getElementById("btn-malla").addEventListener("click", function() {
   link.click();
   document.body.removeChild(link); // Limpia el enlace del documento después de la descarga
 });
+
+document.getElementById("btn-proceso").addEventListener("click", function() {
+  var pdfUrl = "files/req.pdf";
+  
+  // Crea un enlace temporal para abrir el PDF en una nueva pestaña
+  var link = document.createElement("a");
+  link.href = pdfUrl;
+  link.target = '_blank'; // Abre el enlace en una nueva pestaña
+  
+  // Agrega el enlace al documento y simula el clic para abrirlo
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link); // Limpia el enlace del documento después de abrirlo
+});
