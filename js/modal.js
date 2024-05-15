@@ -27,48 +27,48 @@ var modal_cup = document.getElementById("modal-cup");
 var btn_cup = document.getElementById("btn-cup");
 
 // Abrir modal al hacer clic en el botón
-btn_1.addEventListener("click", function() {
+btn_1.addEventListener("click", function () {
   modal_1.style.display = "block";
 });
-btn_2.addEventListener("click", function() {
+btn_2.addEventListener("click", function () {
   modal_2.style.display = "block";
 });
-btn_3.addEventListener("click", function() {
+btn_3.addEventListener("click", function () {
   modal_3.style.display = "block";
 });
-btn_4.addEventListener("click", function() {
+btn_4.addEventListener("click", function () {
   modal_4.style.display = "block";
 });
-btn_5.addEventListener("click", function() {
+btn_5.addEventListener("click", function () {
   modal_5.style.display = "block";
 });
-btn_6.addEventListener("click", function() {
+btn_6.addEventListener("click", function () {
   modal_6.style.display = "block";
 });
-btn_7.addEventListener("click", function() {
+btn_7.addEventListener("click", function () {
   modal_7.style.display = "block";
 });
-btn_8.addEventListener("click", function() {
+btn_8.addEventListener("click", function () {
   modal_8.style.display = "block";
 });
-btn_9.addEventListener("click", function() {
+btn_9.addEventListener("click", function () {
   modal_9.style.display = "block";
 });
-btn_10.addEventListener("click", function() {
+btn_10.addEventListener("click", function () {
   modal_10.style.display = "block";
 });
-btn_req.addEventListener("click", function() {
+btn_req.addEventListener("click", function () {
   modal_req.style.display = "block";
 });
-btn_sel.addEventListener("click", function() {
+btn_sel.addEventListener("click", function () {
   modal_sel.style.display = "block";
 });
-btn_cup.addEventListener("click", function() {
+btn_cup.addEventListener("click", function () {
   modal_cup.style.display = "block";
 });
 
 // Cerrar modal al hacer clic fuera del contenido del modal
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal_1) {
     modal_1.style.display = "none";
   }
@@ -108,4 +108,34 @@ window.addEventListener("click", function(event) {
   if (event.target == modal_cup) {
     modal_cup.style.display = "none";
   }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("btn-bro").addEventListener("click", function () {
+  // URL del PDF en tu carpeta de imágenes
+  var pdfUrl = "files/brochure.pdf";
+
+  // Crea un enlace temporal para la descarga
+  var link = document.createElement("a");
+  link.href = pdfUrl;
+  link.download = "brochure.pdf"; // Nombre de descarga del PDF
+
+  // Agrega el enlace al documento y simula el clic para iniciar la descarga
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link); // Limpia el enlace del documento después de la descarga
 });
